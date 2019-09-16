@@ -31,7 +31,7 @@ docker-compose.yml 에서 volumes 에 데이터가 저장될 경로를 변경하
 - **shell/yona.sh init** : 빌드한 docker 이미지를 컨테이너로 초기 실행합니다.
 - **shell/yona.sh start** : 컨테이너가 존재하면 존재하는 컨테이너를 실행합니다.
 - **shell/yona.sh restart** : 컨테이너를 재시작합니다.
-- **shell/yona.sh stop** : 커네티너를 중지합니다.
+- **shell/yona.sh stop** : 컨테이너를 중지합니다.
 - **shell/yona.sh rm** : 컨테이너를 삭제합니다.
 - **shell/yona.sh log** : 컨테이너의 로그를 출력합니다.
 - **shell/yona.sh exec** : 운영중인 컨테이너 내부에 **bash** 쉘로 들어가게 됩니다.
