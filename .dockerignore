@@ -1,6 +1,6 @@
 .git
 .gitignore
-yobi
+data
 shell
 *.md
 *.sh
