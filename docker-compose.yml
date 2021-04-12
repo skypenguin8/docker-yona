@@ -1,4 +1,4 @@
-version: '2'
+version: '3.1'
 
 services:
   yona:
@@ -12,3 +12,29 @@ services:
       - ./data:/yona/data
     ports:
       - "9000:9000"
+    networks:
+      - yona
+    depends_on:
+      - yona_db
+
+  yona_db:
+    image: mariadb:10.2-bionic
+    container_name: yona_db
+    restart: always
+    volumes:
+      - ./db/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - yona
+    environment:
+      MYSQL_DATABASE: yona
+      MYSQL_USER: yona
+      MYSQL_ROOT_PASSWORD: ils123
+      MYSQL_PASSWORD: ils123
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+networks :
+  yona :
